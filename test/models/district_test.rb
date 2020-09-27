@@ -3,7 +3,7 @@ require 'test_helper'
 class DistrictTest < ActiveSupport::TestCase
   
   def setup
-    @city = cities(:Warszawa)
+    @city = cities(:warszawa)
     @district = @city.districts.build(name: "Example")
   end
 
