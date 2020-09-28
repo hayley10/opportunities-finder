@@ -1,5 +1,6 @@
+<%# provide(:city, @city.name) %>
 <div class="center">
-    <h1>Warszawa</h1>
+    <h1><%= @city_name %></h1>
     <div class="row">
         <div class="col-sm-6 select-list-form">
             <%= form_with(model: @district, local: true) do |f| %>

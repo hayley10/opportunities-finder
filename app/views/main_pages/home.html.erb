@@ -1,7 +1,8 @@
 <div class="center home">
     <h1>Select a city below to see a list of opportunities</h1>
     <div class="home-buttons">
-    <%= link_to "Kraków", list_path, class: "btn btn-lg btn-block btn-primary" %>
-    <%= link_to "Warszawa", list_path, class: "btn btn-lg btn-block btn-primary" %>
+    <% @city.each do |city| %>
+    <%= link_to city.name, list_path(:city_id => city.id), class: "btn btn-lg btn-block btn-primary" %>
+    <% end %>
     </div>
 </div>
