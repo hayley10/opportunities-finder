@@ -15,6 +15,10 @@ body {
     padding-top: 60px;
 }
 
+.center {
+    text-align: center;
+}
+
 /* Header */
 
 #app-name {
@@ -30,9 +34,8 @@ body {
 }
 
 /* Home */
-.center {
+.home {
     padding-top: 25vh;
-    text-align: center;
     a {
         margin: 0 10px;
     }
@@ -47,4 +50,10 @@ h1 {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+}
+
+/* List */
+
+.select-list-form {
+    font-size: 2rem;
 }

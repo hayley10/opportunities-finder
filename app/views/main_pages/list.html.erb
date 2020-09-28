@@ -1,2 +1,15 @@
-<h1>MainPages#list</h1>
-<p>Find me in app/views/main_pages/list.html.erb</p>
+<div class="center">
+    <h1>Warszawa</h1>
+    <div class="row">
+        <div class="col-sm-6 select-list-form">
+            <%= form_with(model: @district, local: true) do |f| %>
+                <%= f.label "District" %>
+                <% districts_array = District.all.map { |district| [district.name, district.id] } %>
+                <%= f.select :name, options_for_select(districts_array) %>
+            <% end %>
+        </div>
+        <div class="col-sm-6">
+            <%= link_to "Add a new opportunity", new_path, class: "btn btn-lg btn-primary" %>
+        </div>
+    </div>
+</div>
