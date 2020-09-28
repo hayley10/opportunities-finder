@@ -57,3 +57,25 @@ h1 {
 .select-list-form {
     font-size: 2rem;
 }
+
+.table {
+    margin: 20px 10px;
+    th {
+        text-align: center;
+    }
+}
+
+/* Forms */
+
+.new-form {
+    font-size: 1.75rem;
+    input, textarea, select, .uneditable-input {
+        border: 1px solid #bbb;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
+input {
+    height: auto !important;
+}
+

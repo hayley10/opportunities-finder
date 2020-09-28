@@ -3,6 +3,7 @@ class MainPagesController < ApplicationController
   end
 
   def list
+    @opportunity = Opportunity.all
   end
 
   def new

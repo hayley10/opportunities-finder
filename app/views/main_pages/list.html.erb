@@ -12,4 +12,34 @@
             <%= link_to "Add a new opportunity", new_path, class: "btn btn-lg btn-primary" %>
         </div>
     </div>
+    <table class="table table-striped table-hover"> 
+        <thead>
+            <tr class="table-primary"> 
+                <th scope="col">Id</th>
+                <th scope="col">Address</th>
+                <th scope="col">Size</th>
+                <th scope="col">Rooms</th>
+                <th scope="col">Floor</th>
+                <th scope="col">Listing_price</th>
+                <th scope="col">Estimated_price</th>
+                <th scope="col">Description</th>
+                <th scope="col">Edit/Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @opportunity.each do |opportunity| %>
+            <tr>
+                <td><%= opportunity.id %></td>
+                <td><%= opportunity.address %></td>
+                <td><%= opportunity.size %></td>
+                <td><%= opportunity.rooms %></td>
+                <td><%= opportunity.floor %></td>
+                <td><%= opportunity.listing_price %></td>
+                <td><%= opportunity.estimated_price %></td>
+                <td><%= opportunity.description %></td>
+                <td></td>
+            </tr>
+            <% end %>
+        <tbody>
+    </table>
 </div>
