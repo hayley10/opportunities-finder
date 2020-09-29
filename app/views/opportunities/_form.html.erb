@@ -3,28 +3,28 @@
     <%= f.collection_select :city_id, City.order(:name), :id, :name, include_blank: true %>
 
     <%= f.label "District" %>
-    <%= f.grouped_collection_select :district_id, City.order(:name), :districts, :name, :id, :name, include_blank: true %>
+    <%= f.grouped_collection_select :district_id, City.order(:name), :districts, :name, :id, :name, include_blank: true, class: 'form-control' %>
             
     <%= f.label :address %>
-    <%= f.text_field :address %>
+    <%= f.text_field :address, class: 'form-control' %>
 
     <%= f.label :size %>
-    <%= f.text_field :size %>
+    <%= f.text_field :size, class: 'form-control' %>
 
     <%= f.label :rooms %>
-    <%= f.text_field :rooms %>
+    <%= f.text_field :rooms, class: 'form-control' %>
 
     <%= f.label :floor %>
-    <%= f.text_field :floor %>
+    <%= f.text_field :floor, class: 'form-control' %>
 
     <%= f.label :listing_price %>
-    <%= f.text_field :listing_price %>
+    <%= f.text_field :listing_price, class: 'form-control' %>
 
     <%= f.label :estimated_price %>
-    <%= f.text_field :estimated_price %>
+    <%= f.text_field :estimated_price, class: 'form-control' %>
 
     <%= f.label :description %>
-    <%= f.text_field :description %>
+    <%= f.text_field :description, class: 'form-control' %>
 
     <%= f.submit yield(:button_text), class: "btn btn-primary" %>
 <% end %>
