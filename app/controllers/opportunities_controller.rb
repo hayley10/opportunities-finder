@@ -16,6 +16,24 @@ class OpportunitiesController < ApplicationController
     end
   end
 
+  def edit
+    @opportunity = Opportunity.find(params[:id])
+  end
+
+  def update
+    @opportunity = Opportunity.find(params[:id])
+    if @opportunity.update(opportunity_params)
+      redirect_to :controller => 'main_pages', :action => 'home'
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+    Opportunity.find(params[:id]).destroy
+    redirect_to :controller => 'main_pages', :action => 'home'
+  end
+
   private
 
     def opportunity_params
