@@ -40,7 +40,7 @@
                 <td><%= opportunity.listing_price %></td>
                 <td><%= opportunity.estimated_price %></td>
                 <td><%= opportunity.description %></td>
-                <td><%= link_to "Edit", edit_path(:id => opportunity.id) %> <%= link_to "Delete", opportunity, method: :delete,
+                <td><%= link_to "Edit", edit_path(:id => opportunity.id, :city_id => @city_id) %> <%= link_to "Delete", opportunity, method: :delete,
                 data: { confirm: "Are you sure?" } %></td>
             </tr>
             <% end %>

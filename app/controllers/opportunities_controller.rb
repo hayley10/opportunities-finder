@@ -19,6 +19,7 @@ class OpportunitiesController < ApplicationController
 
   def edit
     @opportunity = Opportunity.find(params[:id])
+    @city_id = params[:city_id]
   end
 
   def update
