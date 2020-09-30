@@ -1,9 +1,11 @@
 <%= form_with(model: @opportunity, local: true) do |f| %>
+    <%= render 'shared/error_messages' %>
+    
     <%= f.label "City" %>
-    <%= f.collection_select :city_id, City.order(:name), :id, :name, include_blank: true %>
+    <%= f.collection_select :city_id, City.order(:name), :id, :name, {include_blank: true}, {:class => 'form-control'} %>
 
     <%= f.label "District" %>
-    <%= f.grouped_collection_select :district_id, City.order(:name), :districts, :name, :id, :name, include_blank: true, class: 'form-control' %>
+    <%= f.grouped_collection_select :district_id, City.order(:name), :districts, :name, :id, :name, {include_blank: true}, {:class => 'form-control'} %>
             
     <%= f.label :address %>
     <%= f.text_field :address, class: 'form-control' %>

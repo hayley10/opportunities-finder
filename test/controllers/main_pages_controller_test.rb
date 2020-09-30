@@ -6,14 +6,4 @@ class MainPagesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should get list" do
-    get list_path
-    assert_response :success
-  end
-
-  test "should get new" do
-    get new_path
-    assert_response :success
-  end
-
 end

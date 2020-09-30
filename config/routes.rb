@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   root 'main_pages#home'
-  # get '/list', to: 'main_pages#list'
   get '/new',  to: 'opportunities#new'
   get '/edit', to: 'opportunities#edit'
   get '/list', to: 'districts#show'
