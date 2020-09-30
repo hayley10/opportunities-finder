@@ -1,6 +1,7 @@
 class OpportunitiesController < ApplicationController
-  def new
+  def new  
     @opportunity = Opportunity.new
+    @city_id = params[:city_id]
   end
 
   def show
