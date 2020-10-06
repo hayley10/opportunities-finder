@@ -1,7 +1,6 @@
 class OpportunitiesController < ApplicationController
   def new  
-    @opportunity = Opportunity.new
-    @city_id = params[:city_id]
+    @opportunity = Opportunity.new(city_id: params[:city_id])
   end
 
   def show
@@ -13,7 +12,7 @@ class OpportunitiesController < ApplicationController
     if @opportunity.save
       redirect_to @opportunity
     else
-      render 'new'
+      render 'new', location: new_path
     end
   end
 

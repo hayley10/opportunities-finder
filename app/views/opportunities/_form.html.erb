@@ -5,7 +5,7 @@
     <%= f.collection_select :city_id, City.order(:name), :id, :name, {include_blank: true, :selected => params[:city_id]}, {:class => 'form-control', :onchange => "location ='/new?city_id='+this.value"} %>
 
     <%= f.label "District" %>
-    <%= f.collection_select :district_id, District.where(city_id: @city_id).order(:name), :id, :name, {include_blank: true}, {:class => 'form-control'} %>
+    <%= f.collection_select :district_id, District.where(city_id: params[:city_id]).order(:name), :id, :name, {include_blank: true}, {:class => 'form-control'} %>
             
     <%= f.label :address %>
     <%= f.text_field :address, class: 'form-control' %>

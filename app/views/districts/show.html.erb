@@ -10,13 +10,9 @@
             <% end %>
         </div>
         <div class="col-sm-6">
-            <%= link_to "Add a new opportunity", new_path, class: "btn btn-primary" %>
+            <%= link_to "Add a new opportunity", new_path(:city_id => @city_id), class: "btn btn-primary" %>
         </div>
-        <%
-=begin%>
- (:city_id => @city_id) 
-<%
-=end%>
+        
     </div>
     <table class="table table-striped table-hover"> 
         <thead>
